@@ -1,11 +1,11 @@
-# merge-sorted-stream
+# sorted-merge-stream
 
 Merge two sorted streams. 
 
-[![Build Status](https://travis-ci.org/cshum/merge-sorted-stream.svg?branch=master)](https://travis-ci.org/cshum/merge-sorted-stream)
+[![Build Status](https://travis-ci.org/cshum/sorted-merge-stream.svg?branch=master)](https://travis-ci.org/cshum/sorted-merge-stream)
 
 ```
-npm install merge-sorted-stream
+npm install sorted-merge-stream
 ```
 
 Shamelessly taken from [sorted-union-stream](https://github.com/mafintosh/sorted-union-stream) with slight modifications, where values with repeated key are also emitted.
@@ -15,7 +15,7 @@ Merge two sorted streams.
 By default keys are mapped by `value.key` or `value` itself. Add a `toKey` function if you need custom key mapping.
 
 ```js
-var merge = require('merge-sorted-stream')
+var merge = require('sorted-merge-stream')
 
 var from = require('from2')
 var a = from.obj(['a', 'b', 'd', 'e', 'g', 'h'])
@@ -31,7 +31,7 @@ stream.pipe(...)
 Merging multiple streams with custom key mapping:
 
 ```js
-var merge = require('merge-sorted-stream')
+var merge = require('sorted-merge-stream')
 
 var from = require('from2')
 var a = from.obj([{id: 1}, {id: 3}, {id: 6}])
