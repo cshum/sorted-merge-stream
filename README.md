@@ -16,6 +16,8 @@ By default keys are mapped by `value.key` or `value` itself. Add a `toKey` funct
 
 ```js
 var merge = require('merge-sorted-stream')
+
+var from = require('from2')
 var a = from.obj(['a', 'b', 'd', 'e', 'g', 'h'])
 var b = from.obj(['b', 'c', 'f'])
 
@@ -31,6 +33,7 @@ Merging multiple streams with custom key mapping:
 ```js
 var merge = require('merge-sorted-stream')
 
+var from = require('from2')
 var a = from.obj([{id: 1}, {id: 3}, {id: 6}])
 var b = from.obj([{id: 1}, {id: 2}, {id: 6}])
 var c = from.obj([{id: 3}, {id: 5}, {id: 6}])
