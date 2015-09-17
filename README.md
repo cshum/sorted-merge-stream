@@ -45,3 +45,7 @@ stream.pipe(...)
 
 // {id: 1}, {id: 1}, {id: 2}, {id: 3}, {id: 3}, {id: 5}, {id: 6}, {id: 6}, {id: 6}
 ```
+
+## License
+
+MIT
