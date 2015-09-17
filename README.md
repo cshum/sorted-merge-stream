@@ -2,6 +2,8 @@
 
 Merge two sorted streams. 
 
+[![Build Status](https://travis-ci.org/cshum/merge-sorted-stream.svg?branch=master)](https://travis-ci.org/cshum/merge-sorted-stream)
+
 ```
 npm install merge-sorted-stream
 ```
