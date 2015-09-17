@@ -1,9 +1,9 @@
-# merge-sort-stream
+# merge-sorted-stream
 
 Merge two sorted streams. 
 
 ```
-npm install merge-sort-stream
+npm install merge-sorted-stream
 ```
 
 Shamelessly taken from [sorted-union-stream](https://github.com/mafintosh/sorted-union-stream) with slight modifications, where values with repeated key are also emitted.
@@ -13,7 +13,7 @@ Merge two sorted streams.
 By default keys are mapped by `value.key` or `value` itself. Add a `toKey` function if you need custom key mapping.
 
 ```js
-var merge = require('merge-sort-stream')
+var merge = require('merge-sorted-stream')
 var a = from.obj(['a', 'b', 'd', 'e', 'g', 'h'])
 var b = from.obj(['b', 'c', 'f'])
 
@@ -27,7 +27,7 @@ stream.pipe(...)
 Merging multiple streams with custom key mapping:
 
 ```js
-var merge = require('merge-sort-stream')
+var merge = require('merge-sorted-stream')
 
 var a = from.obj([{id: 1}, {id: 3}, {id: 6}])
 var b = from.obj([{id: 1}, {id: 2}, {id: 6}])

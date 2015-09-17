@@ -1,5 +1,5 @@
 {
-  "name": "merge-sort-stream",
+  "name": "merge-sorted-stream",
   "version": "1.0.0",
   "description": "Merge two sorted streams",
   "author": "Adrian C Shum <adrian@cshum.com> (https://github.com/cshum)",
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cshum/merge-sort-stream.git"
+    "url": "https://github.com/cshum/merge-sorted-stream.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/cshum/merge-sort-stream",
+  "homepage": "https://github.com/cshum/merge-sorted-stream",
   "scripts": {
     "test": "standard && node test.js"
   }
