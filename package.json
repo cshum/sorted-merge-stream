@@ -1,6 +1,6 @@
 {
   "name": "sorted-merge-stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Merge two sorted streams",
   "author": "Adrian C Shum <adrian@cshum.com> (https://github.com/cshum)",
   "dependencies": {
