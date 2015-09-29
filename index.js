@@ -5,11 +5,17 @@ function defaultKey (val) {
   return val.key || val
 }
 
-module.exports = function merge (streamA, streamB, toKey) {
+module.exports = function merge (streamA, streamB, toKey, opts) {
   var readA = iterate(streamA)
   var readB = iterate(streamB)
 
-  if (!toKey) toKey = defaultKey
+  if (typeof toKey !== 'function') {
+    opts = toKey
+    toKey = defaultKey
+  }
+
+  opts = opts || {}
+  var reverse = !!opts.reverse
 
   var stream = from.obj(function loop (size, cb) {
     readA(function (err, dataA, nextA) {
@@ -38,7 +44,7 @@ module.exports = function merge (streamA, streamB, toKey) {
           return loop(size, cb)
         }
 
-        if (keyA < keyB) {
+        if ((keyA < keyB && !reverse) || (keyA > keyB && reverse)) {
           nextA()
           return cb(null, dataA)
         }
